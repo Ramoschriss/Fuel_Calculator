@@ -8,20 +8,20 @@
     tools:context=".Price_fuelActivity">
 
     <Button
-        android:id="@+id/proximo1"
+        android:id="@+id/btnproximo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Proximo"
+        android:text="Próximo"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="158dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/preço"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="Preço do combustível"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -29,14 +29,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.417" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="1dp">
+        android:layout_margin="18dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/preço"
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_combustivel"
@@ -45,4 +47,16 @@
             android:hint="Ex:1.74"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="-16dp"
+        android:gravity="center_vertical"
+        android:text="Passo 1 de 3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/preço"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
