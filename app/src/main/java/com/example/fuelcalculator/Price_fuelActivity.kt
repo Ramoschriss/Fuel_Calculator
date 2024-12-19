@@ -22,25 +22,28 @@ class Price_fuelActivity : AppCompatActivity() {
             insets
         }
 
-        val edtcombustivel = findViewById<TextInputEditText>(R.id.edt_combustivel)
+        val edtcombustivel = findViewById<TextInputEditText>(R.id.edtcombustivel)
         val btnproximo1 = findViewById<Button>(R.id.btnproximo1)
 
         btnproximo1.setOnClickListener {
-            val combustivel: String = edtcombustivel.text.toString()
+            val combustivelStr: String = edtcombustivel.text.toString()
 
-            if (edtcombustivel.text.toString().isEmpty())
+            if (combustivelStr == "") {
 
-            Snackbar.make(
-                edtcombustivel, "Preencha todos os campos ",
-                Snackbar.LENGTH_LONG
-            )
-                .show()
+                Snackbar.make(
+                    edtcombustivel, "Preencha o campo vazio ",
+                    Snackbar.LENGTH_LONG
+                )
+                    .show()
+            } else {
+
+                val pricefuel = combustivelStr.toFloat();
 
 
-
-
-            val intent = Intent(this, Consumer_FuelActivity::class.java)
-            startActivity(intent)
+                val intent = Intent(this, Consumer_FuelActivity::class.java)
+                intent.putExtra("111", pricefuel)
+                startActivity(intent)
+            }
         }
 
 

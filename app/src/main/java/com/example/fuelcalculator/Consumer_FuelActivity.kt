@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class Consumer_FuelActivity : AppCompatActivity() {
@@ -20,15 +21,29 @@ class Consumer_FuelActivity : AppCompatActivity() {
             insets
         }
 
+
         val edtconsumer = findViewById<TextInputEditText>(R.id.edtconsumer)
         val btnproximo2 = findViewById<Button>(R.id.btnproximo2)
 
         btnproximo2.setOnClickListener {
-            val consumer: String = edtconsumer.text.toString()
 
 
-            val intent = Intent(this, DistanceActivity::class.java)
-            startActivity(intent)
+            val consumerStr: String = edtconsumer.text.toString()
+
+            if (consumerStr == "") {
+                Snackbar.make(
+                    edtconsumer, "Preencha o campo vazio",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            } else {
+
+                val consumer = consumerStr.toFloat()
+
+
+                val intent = Intent(this, DistanceActivity::class.java)
+                intent.putExtra("222", consumer)
+                startActivity(intent)
+            }
         }
 
 

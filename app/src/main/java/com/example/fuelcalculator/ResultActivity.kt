@@ -1,10 +1,12 @@
 package com.example.fuelcalculator
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +18,25 @@ class ResultActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        val result = intent.getFloatExtra("444",0f)
+
+        val tvResult = findViewById<TextView>(R.id.tvresult)
+
+        tvResult.text = result.toString()
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 }

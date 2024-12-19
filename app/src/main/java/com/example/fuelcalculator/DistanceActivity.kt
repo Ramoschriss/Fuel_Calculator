@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class DistanceActivity : AppCompatActivity() {
@@ -22,14 +23,41 @@ class DistanceActivity : AppCompatActivity() {
 
 
         val edtdistance = findViewById<TextInputEditText>(R.id.edtdistance)
-        val btnproximo3 = findViewById<Button>(R.id.btnproximo3)
+        val btncalcular = findViewById<Button>(R.id.btncalcular)
 
-        btnproximo3.setOnClickListener {
-            val edtdistance: String = edtdistance.text.toString()
+        btncalcular.setOnClickListener {
 
-            val intent = Intent(this, ResultActivity::class.java)
 
-            startActivity(intent)
+
+            val distanceStr: String = edtdistance.text.toString()
+
+
+            if (distanceStr == "") {
+                Snackbar.make(
+                    edtdistance, "Preencha o campo vazio",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            } else {
+
+                val distance = distanceStr.toFloat()
+
+
+                val pricefuel = intent.getFloatExtra("111", 0f)
+                val consumer = intent.getFloatExtra("222", 0f)
+
+
+                val litrosNecessary = distance / consumer
+                val gastoTotal = litrosNecessary * pricefuel
+
+                println(gastoTotal)
+
+
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("444", gastoTotal)
+                startActivity(intent)
+
+
+            }
         }
 
 

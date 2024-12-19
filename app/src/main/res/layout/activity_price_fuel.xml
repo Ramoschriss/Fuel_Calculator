@@ -41,7 +41,7 @@
         tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_combustivel"
+            android:id="@+id/edtcombustivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex:1.74"
