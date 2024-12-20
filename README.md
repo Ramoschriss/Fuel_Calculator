@@ -2,15 +2,20 @@
 esse projeto é um aplicativo android nativo desenvolvido com a linguagem kotlin, tem como principal funcionalidade fazer o cálculo de combustivel para viagens e mostrar o valor que será necessário abastecer na tela final.
 
 ## :camera_flash: Screenshots
-<img src=https://github.com/user-attachments/assets/156133fb-48e9-4ab2-ac11-71e7ececc072 width=200/>
-<img src=https://github.com/user-attachments/assets/d6e32865-605f-4684-80e9-fd03edda7d29 width=200/>
-<img src=https://github.com/user-attachments/assets/433a1083-4745-4410-9a18-76a5903e4162 width=200/>
-<img src=https://github.com/user-attachments/assets/27e9409d-1879-486f-a81f-82e5b233a325 width=200/>
-<img src=https://github.com/user-attachments/assets/99250206-d76c-446a-b49e-a9dc3a6ff564 width=200/>
+<img src= https://github.com/user-attachments/assets/e9ee42ac-5ea0-482e-9e22-0ca5c96157b7 width=195/>
+<img src=https://github.com/user-attachments/assets/66b1dcbc-5a9a-4143-88cf-aead052a2e84 width=195/>
+<img src=https://github.com/user-attachments/assets/879320f7-91f9-418d-a828-69a48231f793 width=195/>
+<img src=https://github.com/user-attachments/assets/e4fb9125-9a0f-49f2-84c6-9550d05037a9 width=195/>
+<img src=https://github.com/user-attachments/assets/e38c0cc2-47c3-4580-8392-714ce0f9adb4 width=195/>
+
+
+
+
 
 
 
 ## Tecnologias
+
 - Activity
 - Intent
 - SnackBar
