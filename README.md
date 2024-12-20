@@ -6,13 +6,7 @@ esse projeto é um aplicativo android nativo desenvolvido com a linguagem kotlin
 <img src=https://github.com/user-attachments/assets/66b1dcbc-5a9a-4143-88cf-aead052a2e84 width=195/>
 <img src=https://github.com/user-attachments/assets/879320f7-91f9-418d-a828-69a48231f793 width=195/>
 <img src=https://github.com/user-attachments/assets/e4fb9125-9a0f-49f2-84c6-9550d05037a9 width=195/>
-<img src=https://github.com/user-attachments/assets/e38c0cc2-47c3-4580-8392-714ce0f9adb4 width=195/>
-
-
-
-
-
-
+<img src=https://github.com/user-attachments/assets/e34e0262-6668-4242-bcc5-bc537ca6adcc width=195/>
 
 ## Tecnologias
 
