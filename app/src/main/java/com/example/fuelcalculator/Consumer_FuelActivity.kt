@@ -10,38 +10,38 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
+const val key_fuel_consumer = "CONSUMER_FUEL"
+
 class Consumer_FuelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_consumer_fuel)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        val price = intent.getFloatExtra("KEY PRICE", 0f)
 
 
-        val edtconsumer = findViewById<TextInputEditText>(R.id.edtconsumer)
-        val btnproximo2 = findViewById<Button>(R.id.btnproximo2)
+        val edtconsumer = findViewById<TextInputEditText>(R.id.edt_consumer)
+        val btnproximo2 = findViewById<Button>(R.id.btn_proximo2)
 
         btnproximo2.setOnClickListener {
 
 
-            val consumerStr: String = edtconsumer.text.toString()
 
-            if (consumerStr == "") {
+
+            if (edtconsumer.text.toString() == "") {
                 Snackbar.make(
                     edtconsumer, "Preencha o campo vazio",
                     Snackbar.LENGTH_LONG
                 ).show()
+
             } else {
 
-                val consumer = consumerStr.toFloat()
+                val consumer = edtconsumer.text.toString().toFloatOrNull() ?: 0.0
 
 
                 val intent = Intent(this, DistanceActivity::class.java)
-                intent.putExtra("222", consumer)
+                intent.putExtra(key_fuel_consumer, consumer)
+                intent.putExtra("KEY PRICE",price)
                 startActivity(intent)
             }
         }
